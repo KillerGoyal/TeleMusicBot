@@ -20,7 +20,7 @@ Music on Voice Calls Telegram
 Install package required
 ```
 $ git clone https://github.com/KillerGoyal/TeleMusicBot
-$ cd KryPtoN-Music-Bot
+$ cd TeleMusicBot
 $ pip install -r requirements.txt
 ```
 Setup config
@@ -28,12 +28,12 @@ configs.py and edit
 
 Execute!
 ```
-$ python3 -m krypton
+$ python3 -m KillerSk
 ```
 
 # Heroku 
 
-[![Heroku Badge](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KillerGoyal/TeleMusicBot/tree/master)
+[![Heroku Badge](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KillerGoyal/TeleMusicBot/master)
 
 ### Generate String session [IMPORTANT]
 Download this file [generate_string_session.py](https://raw.github.com/KillerGoyal/TeleMusicBot/master/generate_string_session.py)

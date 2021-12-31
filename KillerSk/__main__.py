@@ -21,7 +21,7 @@ from .configs import (
     API_HASH as api_hash,
     SUDO_CHAT_ID as sudo_chat_id,
     ARQ_API,
-    KEY as key
+    KEY as key,
     HEROKU
 )
 

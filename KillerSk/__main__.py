@@ -89,7 +89,7 @@ async def join(_, message):
     await message.reply_text('Succsessfully joined!')
     
 # Arq Client
-arq = ARQ(ARQ_API,key,session)
+arq = ARQ(ARQ_API,key,SESSION_STRING)
 
 @app.on_message(filters.text & cmd_filter('mute'))
 async def mute(_, message):

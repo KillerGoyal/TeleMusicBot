@@ -127,6 +127,7 @@ async def leave(_, message):
     queue.clear()
     playing = False
     group_calls.input_filename = ''
+    await session.close()
     await message.reply_text('Succsessfully leaved!')
 
 @app.on_message(filters.text & cmd_filter('kill'))
@@ -226,6 +227,7 @@ async def play():
 
 async def deezer(requested_by, query):
     global playing
+    arq = ARQ(ARQ_API,key,SESSION_STRING)
     m = await send(f"__**Searching for {query} on Deezer.**__")
     try:
         songs = await arq.deezer(query, 1)
@@ -260,6 +262,7 @@ async def deezer(requested_by, query):
 
 
 async def jiosaavn(requested_by, query):
+    arq = ARQ(ARQ_API,key,SESSION_STRING)
     global playing
     m = await send(f"__**Searching for {query} on JioSaavn.**__")
     try:
@@ -298,6 +301,7 @@ async def jiosaavn(requested_by, query):
 
 
 async def ytplay(requested_by, query):
+    arq = ARQ(ARQ_API,key,SESSION_STRING)
     global playing
     ydl_opts = {"format": "bestaudio"}
     m = await send(f"__**Searching for {query} on YouTube.**__")

@@ -48,7 +48,7 @@ else:
 # File raw music
 raw_filename = 'input.raw'
 
-group_call_factory = GroupCallFactory(pyro_client, enable_logs_to_console=False)
+group_call_factory = GroupCallFactory(Client, enable_logs_to_console=False)
 file_group_call = group_call_factory.get_file_group_call('input.raw')
 # device_group_call = group_call_factory.get_device_group_call(audio_output_device='External Headphones')
 # one more way

@@ -17,5 +17,5 @@ if not HEROKU:
 
 # don't make changes below this line
 # ARQ_API = "http://35.240.133.234:8000"
-ARQ_API = "http://thearq.tech/
+ARQ_API = "http://thearq.tech/"
 KEY = "VNDYQL-MORNWL-UAIETE-KYJFWX-ARQ"

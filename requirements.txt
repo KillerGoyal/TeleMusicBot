@@ -1,0 +1,8 @@
+aiofiles
+ffmpeg-python
+Pillow
+pytgcalls
+python-arq
+Pyrogram
+TgCrypto
+youtube_dl

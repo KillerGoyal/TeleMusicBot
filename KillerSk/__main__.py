@@ -5,6 +5,7 @@ from aiohttp import ClientSession
 from datetime import datetime
 from pyrogram import Client, filters
 from pytgcalls import GroupCall
+from pytgcalls import GroupCallFactory
 from Python_ARQ import ARQ
 
 from .functions import (
@@ -34,16 +35,17 @@ from .misc import (
 
 if HEROKU:
     from .configs import SESSION_STRING
-
+    
 if not HEROKU:
     app = Client('ktgvc', api_id=api_id, api_hash=api_hash)
 else:
+    session = ClientSession()
     app = Client(SESSION_STRING, api_id=api_id, api_hash=api_hash)
 
-# group_call_factory = GroupCallFactory(Client, enable_logs_to_console=False)
-group_calls = GroupCall(None, path_to_log_file='')
-# group_calls = group_call_factory.get_file_group_call('')
-session = ClientSession()
+group_call_factory = GroupCallFactory(Client, enable_logs_to_console=False)
+# group_calls = GroupCall(None, path_to_log_file='')
+group_calls = group_call_factory.get_file_group_call('')
+
 cmd_filter = lambda cmd: filters.command(cmd, prefixes='/')
 
 # Arq Client

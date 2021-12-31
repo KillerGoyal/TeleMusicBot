@@ -40,9 +40,9 @@ if not HEROKU:
 else:
     app = Client(SESSION_STRING, api_id=api_id, api_hash=api_hash)
 
-group_call_factory = GroupCallFactory(Client, enable_logs_to_console=False)
-# group_calls = GroupCall(None, path_to_log_file='')
-group_calls = group_call_factory.get_file_group_call('')
+# group_call_factory = GroupCallFactory(Client, enable_logs_to_console=False)
+group_calls = GroupCall(None, path_to_log_file='')
+# group_calls = group_call_factory.get_file_group_call('')
 
 cmd_filter = lambda cmd: filters.command(cmd, prefixes='/')
 

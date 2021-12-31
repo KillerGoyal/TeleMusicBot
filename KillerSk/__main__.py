@@ -21,6 +21,7 @@ from .configs import (
     API_HASH as api_hash,
     SUDO_CHAT_ID as sudo_chat_id,
     ARQ_API,
+    KEY as key
     HEROKU
 )
 
@@ -46,7 +47,7 @@ group_calls = group_call_factory.get_file_group_call('')
 cmd_filter = lambda cmd: filters.command(cmd, prefixes='/')
 
 # Arq Client
-arq = ARQ(ARQ_API)
+arq = ARQ(ARQ_API,key,SESSION_STRING)
 
 # File raw music
 raw_filename = 'input.raw'

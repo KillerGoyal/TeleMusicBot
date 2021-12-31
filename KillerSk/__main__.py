@@ -39,17 +39,14 @@ if HEROKU:
 if not HEROKU:
     app = Client('ktgvc', api_id=api_id, api_hash=api_hash)
 else:
-    session = ClientSession()
     app = Client(SESSION_STRING, api_id=api_id, api_hash=api_hash)
 
-group_call_factory = GroupCallFactory(Client, enable_logs_to_console=False)
+group_call_factory = GroupCallFactory(app, enable_logs_to_console=False)
 # group_calls = GroupCall(None, path_to_log_file='')
 group_calls = group_call_factory.get_file_group_call('')
 
 cmd_filter = lambda cmd: filters.command(cmd, prefixes='/')
 
-# Arq Client
-arq = ARQ(ARQ_API,key,session)
 
 # File raw music
 raw_filename = 'input.raw'
@@ -83,12 +80,16 @@ async def donation(_, message):
 
 @app.on_message(filters.text & cmd_filter('join'))
 async def join(_, message):
+    session = ClientSession()
     if group_calls.is_connected:
         await message.reply_text('Bot already joined!')
         return
     group_calls.client = app
     await group_calls.start(message.chat.id)
     await message.reply_text('Succsessfully joined!')
+    
+# Arq Client
+arq = ARQ(ARQ_API,key,session)
 
 @app.on_message(filters.text & cmd_filter('mute'))
 async def mute(_, message):

@@ -1,7 +1,7 @@
 import asyncio
 import os
 import youtube_dl
-
+from aiohttp import ClientSession
 from datetime import datetime
 from pyrogram import Client, filters
 from pytgcalls import GroupCall
@@ -43,11 +43,11 @@ else:
 # group_call_factory = GroupCallFactory(Client, enable_logs_to_console=False)
 group_calls = GroupCall(None, path_to_log_file='')
 # group_calls = group_call_factory.get_file_group_call('')
-
+session = ClientSession()
 cmd_filter = lambda cmd: filters.command(cmd, prefixes='/')
 
 # Arq Client
-arq = ARQ(ARQ_API,key,SESSION_STRING)
+arq = ARQ(ARQ_API,key,session)
 
 # File raw music
 raw_filename = 'input.raw'

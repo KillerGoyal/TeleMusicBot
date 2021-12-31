@@ -2,7 +2,7 @@
 
 Music on Voice Calls Telegram
 
-[![Image Preview](https://raw.github.com/KillerGoyal/TeleMusicBot/KillerSk/master/etc/preview.jpg)](https://github.com/KillerGoyal/TeleMusicBot)
+[![Image Preview](https://raw.github.com/KillerGoyal/TeleMusicBot/master/etc/preview.jpg)](https://github.com/KillerGoyal/TeleMusicBot)
 
 # Support
 - Python 3.7 or above
@@ -19,7 +19,7 @@ Music on Voice Calls Telegram
 # Usage
 Install package required
 ```
-$ git clone https://github.com/Kry9toN/KryPtoN-Music-Bot
+$ git clone https://github.com/KillerGoyal/TeleMusicBot
 $ cd KryPtoN-Music-Bot
 $ pip install -r requirements.txt
 ```
@@ -33,10 +33,10 @@ $ python3 -m krypton
 
 # Heroku 
 
-[![Heroku Badge](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KillerGoyal/TeleMusicBot/KillerSk/tree/master)
+[![Heroku Badge](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KillerGoyal/TeleMusicBot/tree/master)
 
 ### Generate String session [IMPORTANT]
-Download this file [generate_string_session.py](https://raw.github.com/KillerGoyal/TeleMusicBot/KillerSk/master/generate_string_session.py)
+Download this file [generate_string_session.py](https://raw.github.com/KillerGoyal/TeleMusicBot/master/generate_string_session.py)
 
 ```
 $ pip3 install pyrogram TgCrypto
@@ -68,7 +68,7 @@ Command | Description
 - [Message On Telegram](https://t.me/souravkkk)
 
 # License
-[GPL-3.0 License](https://github.com/KillerGoyal/TeleMusicBot/KillerSk/blob/master/LICENSE.md) KillerSk © 2021
+[GPL-3.0 License](https://github.com/KillerGoyal/TeleMusicBot/blob/master/LICENSE.md) KillerSk © 2021
 
 # Credit
-- [@Kry9toN](ttps://github.com/Kry9toN)
+- [@Kry9toN](https://github.com/Kry9toN)
